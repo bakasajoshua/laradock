@@ -430,8 +430,6 @@ services:
       environment:
         - SA_PASSWORD=${MSSQL_PASSWORD}
         - ACCEPT_EULA=Y
-      volumes:
-        - ${DATA_PATH_HOST}/mssql:/var/opt/mssql/data
       ports:
         - "${MSSQL_PORT}:1433"
 
