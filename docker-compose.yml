@@ -426,16 +426,12 @@ services:
       build:
         context: ./mssql
       environment:
-        - MSSQL_PID=Express
-        - MSSQL_DATABASE=${MSSQL_DATABASE}
         - SA_PASSWORD=${MSSQL_PASSWORD}
         - ACCEPT_EULA=Y
       volumes:
-        - ${DATA_PATH_HOST}/mssql:/var/opt/mssql
+        - ${DATA_PATH_HOST}/mssql:/var/opt/mssql/data
       ports:
         - "${MSSQL_PORT}:1433"
-      networks:
-        - backend
 
 ### MariaDB ##############################################
     mariadb:
