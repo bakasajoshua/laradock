@@ -599,7 +599,7 @@ RUN if [ ${INSTALL_LDAP} = true ]; then \
 # SQL SERVER:
 ###########################################################################
 
-ARG INSTALL_MSSQL=false
+ARG INSTALL_MSSQL=true
 
 RUN set -eux; \
   if [ ${INSTALL_MSSQL} = true ]; then \

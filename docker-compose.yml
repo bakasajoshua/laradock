@@ -430,8 +430,12 @@ services:
       environment:
         - SA_PASSWORD=${MSSQL_PASSWORD}
         - ACCEPT_EULA=Y
+      volumes:
+        - ${DATA_PATH_HOST}/mssql:${MSSQL_DATA_PATH}
       ports:
         - "${MSSQL_PORT}:1433"
+      networks:
+        - backend
 
 ### MariaDB ##############################################
     mariadb:
