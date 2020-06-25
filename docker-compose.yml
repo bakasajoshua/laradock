@@ -351,6 +351,21 @@ services:
         - frontend
         - backend
 
+### Flask Reporting Server #########################################
+    flask:
+      build:
+        context: ./flask
+      #volumes:
+      #  - ${DATA_PATH_HOST}/flask:/var/lib/flask
+      ports:
+        - "${FLASK_HOST_HTTP_PORT}:80"
+        - "${FLASK_HOST_HTTPS_PORT}:443"
+      depends_on:
+        - workspace
+      networks:
+        - frontend
+        - backend
+
 ### Blackfire ########################################
     blackfire:
       image: blackfire/blackfire

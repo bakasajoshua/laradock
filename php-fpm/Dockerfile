@@ -128,7 +128,7 @@ RUN if [ ${INSTALL_FAKETIME} = true ]; then \
 # SOAP:
 ###########################################################################
 
-ARG INSTALL_SOAP=false
+ARG INSTALL_SOAP=true
 
 RUN if [ ${INSTALL_SOAP} = true ]; then \
     # Install the soap extension
