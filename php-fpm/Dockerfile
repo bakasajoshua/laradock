@@ -488,7 +488,7 @@ RUN set -xe; \
 # PHP OCI8:
 ###########################################################################
 
-ARG INSTALL_OCI8=false
+ARG INSTALL_OCI8=true
 
 ENV LD_LIBRARY_PATH="/opt/oracle/instantclient_12_1"
 ENV OCI_HOME="/opt/oracle/instantclient_12_1"

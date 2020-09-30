@@ -97,7 +97,7 @@ RUN if [ ${INSTALL_BCMATH} = true ]; then \
 # PHP OCI8:
 ###########################################################################
 
-ARG INSTALL_OCI8=false
+ARG INSTALL_OCI8=true
 
 ENV LD_LIBRARY_PATH="/usr/local/instantclient"
 ENV ORACLE_HOME="/usr/local/instantclient"
