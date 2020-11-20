@@ -5,7 +5,7 @@
 ### Paths #################################################
 
 # Point to the path of your applications code on your host
-APP_CODE_PATH_HOST=../code
+APP_CODE_PATH_HOST=../code/projects
 
 # Point to where the `APP_CODE_PATH_HOST` should be in the container
 APP_CODE_PATH_CONTAINER=/var/www
@@ -349,8 +349,9 @@ PERCONA_ENTRYPOINT_INITDB=./percona/docker-entrypoint-initdb.d
 ### MSSQL #################################################
 
 MSSQL_DATABASE=homestead
-MSSQL_PASSWORD=<root@Passw0rd>
+MSSQL_PASSWORD=5h!ftg@Passw0rd
 MSSQL_PORT=1433
+MSSQL_DATA_PATH=/var/opt/mssql/data
 
 ### MARIADB ###############################################
 
@@ -924,3 +925,7 @@ GEARMAN_MYSQL_TABLE=gearman_queue
 
 ### ELK Stack ##################################################
 ELK_VERSION=7.9.1
+
+### FLASK ##################################################
+FLASK_HOST_HTTP_PORT=82
+FLASK_HOST_HTTPS_PORT=8443
